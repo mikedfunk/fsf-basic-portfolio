@@ -13,27 +13,34 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700%7CSource+Code+Pro:200,300%26subset=latin,latin-ext">
   <!-- Site-specific Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $("header").load("test_file.txt", function( response, status, xhr ) {
+        if ( status == "error" ) {
+          var msg = "Sorry but there was an error: ";
+          $("header").html(msg + xhr.status + " " + xhr.statusText);
+        }
+        else
+          $("header").html("<p>Hello from your header tag!</p>");
+      });
+
+      $("#test").html("<p>Hi, World!</p>");
+      $("#test").load("https://google.com");
+
+    });
+  </script>
 </head>
 <!--================================= BODY =================================-->
 <body>
-  <header>
-    <div id="name">Christopher B. Zenner</div>
-    <!-- begin site navigation -->
-    <nav>
-      <ul>
-        <li>About</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
-    <!-- end site navigation -->
-  </header>
+  <header></header>
+  <div id="test"></div>
   <main>
     <h1>About Me</h1>
     <img src="assets/images/*me-2017a.png" width="240" alt="Christopher B. Zenner">
     <p>An <a href="https://www.enneagraminstitute.com/type-1" target="_blank">Enneagram 1w2</a>, Chris is driven by principle. He eschews coffee for tea, punctuating his days with steamy mugs of Japanese green&mdash;<a href="http://mellowmonk.com/buyGreenTea.htm" target="_blank">a fine fukamushi sencha</a> to be exact. When he doesn't have his nose in a five-star self-improvement book, he finds his bliss behind the keyboard of his <a href="https://www.apple.com/macbook-pro-16" target="_blank">MacBook Pro 16"</a>, writing code in an endeavor to make himself worthy of his machine. Chris thinks LA is way too sunny, and he throws an error when his broadband is out.</p>
   </main>
-  <footer>
-    <div id="copyright">&copy; 2020 Christopher B. Zenner. All rights reserved.</div>
-  </footer>
+  <script type="text/javascript">
+    $('#footer').load('./footer.html');
+  </script>
 </body>
