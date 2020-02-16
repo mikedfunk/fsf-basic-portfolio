@@ -17,6 +17,9 @@ FSWB.
    { border: 1px solid purple !important; }
 */
 
+/******************************************************************************
+ Global Elements
+*******************************************************************************/
 * {
   /* make widths static */
   box-sizing: border-box;
@@ -28,6 +31,9 @@ body {
   font: 16px/1.5em 'Open Sans', sans-serif;
 }
 
+/******************************************************************************
+ Header Elements
+*******************************************************************************/
 header {
   letter-spacing: 3px;
 }
@@ -45,6 +51,9 @@ h1 {
   font-family: 'Raleway', sans-serif;
 }
 
+/******************************************************************************
+ Navigation Elements
+*******************************************************************************/
 nav {
   float: right;
   width: 30%;
@@ -95,6 +104,9 @@ a:hover {
   text-decoration: underline;
 }
 
+/******************************************************************************
+ Main Content Elements
+*******************************************************************************/
 main {
   background: #fff;
   border: 1px solid #ddd;
@@ -124,33 +136,84 @@ main p {
   line-height: 2em;
 }
 
-.photo-box {
-  float: left;
-  margin: 10px 20px;
-  padding: 0 10px;
-  position: relative;
-}
-
-.photo-label {
-  background: #4aaaa5;
-  bottom: 10px;
-  color: #fff;
-  float: left;
-  opacity: 75%;
-  padding: 10px 0;
-  position: absolute;
-  text-align: center;
-}
-
 main figure img {
   padding: 0;
 }
 
-.photo-label,
-main figure img {
+main figure img,
+.photo-label {
   width: 240px;
 }
 
+/******************************************************************************
+ Form Elements
+*******************************************************************************/
+main form input[type=text],
+main form input[type=email],
+main form textarea {
+  color: #ccc;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+/* Form input "glow" compliments of CSS Tricks:
+   https://css-tricks.com/snippets/css/glowing-blue-input-highlights/ */
+main form input,
+main form textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  line-height: 1.25em;
+  margin: 5px 1px 3px 0px;
+  outline: none;
+}
+
+main form input:focus, 
+main form textarea:focus {
+  border: 1px solid rgba(74, 170, 165, 1);
+  color: #777;
+}
+ 
+main form input:focus, 
+main form textarea:focus,
+main form input[type=button]:hover,
+main form input[type=submit]:hover,
+main form input[type=reset]:hover {
+  box-shadow: 0 0 5px rgba(74, 170, 165, 1);
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+main form input[type=button],
+main form input[type=submit],
+main form input[type=reset] {
+  background-color: #4aaaa5;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+main form label {
+  display: block;
+  margin-top: 10px;
+}
+
+/******************************************************************************
+ Footer Element
+*******************************************************************************/
 footer {
   background: #666;
   border-top: 5px #4aaaa5 solid;
@@ -158,6 +221,9 @@ footer {
   width: 100%;
 }
 
+/******************************************************************************
+ Class & ID Elements
+*******************************************************************************/
 .header-container,
 .main-container,
 main,
@@ -175,6 +241,25 @@ footer {
 .main-container {
   margin: 20px auto;
   min-height: calc(100vh - 150px);
+}
+
+.photo-box {
+  float: left;
+  margin: 20px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.photo-label {
+  background: #4aaaa5;
+  bottom: 10px;
+  color: #fff;
+  display: block;
+  float: left;
+  opacity: 75%;
+  padding: 10px 0;
+  position: absolute;
+  text-align: center;
 }
 
 #name {
