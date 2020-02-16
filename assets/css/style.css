@@ -115,13 +115,40 @@ main img {
   /* ISSUE: only rounding top, left corner (20200215). */
   /* border-radius: 20px; */
   float: left;
-  width: 240px;
   padding: 0 20px 20px 0;
+  width: 240px;
 }
 
 main p {
   font-size: 20px;
   line-height: 2em;
+}
+
+.photo-box {
+  float: left;
+  margin: 10px 20px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.photo-label {
+  background: #4aaaa5;
+  bottom: 10px;
+  color: #fff;
+  float: left;
+  opacity: 75%;
+  padding: 10px 0;
+  position: absolute;
+  text-align: center;
+}
+
+main figure img {
+  padding: 0;
+}
+
+.photo-label,
+main figure img {
+  width: 240px;
 }
 
 footer {
