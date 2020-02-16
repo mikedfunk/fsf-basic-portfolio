@@ -1,6 +1,6 @@
 # The Coding Boot Camp @ UCLA Extension
 ## Homework 1 (Recommended): That Portfolio Though
-The culmination of Homework 1 for The Coding Boot Camp @ UCLA Extension is my three-page professional website. The site comprises the following files:
+The culmination of Homework 1 for [The Coding Boot Camp @ UCLA Extension](https://bootcamp.uclaextension.edu/coding/) is my three-page professional website. The site comprises the following files:
 
 - **.gitignore**: file types to exclude in commits
 - **README.md**: the current document
