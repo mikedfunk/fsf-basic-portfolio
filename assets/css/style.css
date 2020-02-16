@@ -171,7 +171,8 @@ main form textarea {
   outline: none;
 }
 
-main form input:focus, 
+main form input[type=text]:focus,
+main form input[type=email]:focus, 
 main form textarea:focus {
   border: 1px solid rgba(74, 170, 165, 1);
   color: #777;
