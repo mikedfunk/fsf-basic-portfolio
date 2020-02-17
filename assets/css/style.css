@@ -26,7 +26,11 @@ FSWB.
 }
 
 body {
+  background: #eee;
+  /* Image options for backgrounds:
   background-image: url("../img/dot-grid.png");
+  background-image: url("../img/grey.png"); */
+  background-image: url("../img/grey_@2X.png");
   color: #777;
   font: 16px/1.5em 'Open Sans', sans-serif;
 }
@@ -266,7 +270,7 @@ footer {
 #name {
   background: #4aaaa5;
   float: left;
-  font-size: 2em;
+  font: 2em 'Share Tech Mono', monospace;
   line-height: 2em;
   text-align: center;
   width: 50%;
