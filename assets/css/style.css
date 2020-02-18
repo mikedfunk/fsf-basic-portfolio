@@ -1,0 +1,288 @@
+/******************************************************************************
+FSWD:  Christopher B. Zenner
+Date:  02/15/2020
+File:  style.css
+Ver.:  0.1.0 20200214
+
+This CSS specifies the layout and style for the basic portfolio site of the
+FSWB.
+*******************************************************************************/
+
+/* Debug */
+/* { border: 1px solid red !important; }
+   { border: 1px solid orange !important; }
+   { border: 1px solid yellow !important; }
+   { border: 1px solid green !important; }
+   { border: 1px solid blue !important; }
+   { border: 1px solid purple !important; }
+*/
+
+/******************************************************************************
+ Global Elements
+*******************************************************************************/
+* {
+  /* make widths static */
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  /* Image options for backgrounds:
+  background-image: url("../img/dot-grid.png");
+  background-image: url("../img/grey.png"); */
+  background-image: url("../img/grey_@2X.png");
+  color: #777;
+  font: 16px/1.5em 'Open Sans', sans-serif;
+}
+
+/******************************************************************************
+ Header Elements
+*******************************************************************************/
+header {
+  letter-spacing: 3px;
+}
+
+header, 
+.main-container {
+  /* DEBUG:
+     border: 1px red solid; */ 
+  margin: 0 auto;
+  width: 960px;
+}
+
+header,
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/******************************************************************************
+ Navigation Elements
+*******************************************************************************/
+nav {
+  float: right;
+  width: 30%;
+}
+
+nav ul {
+  float: right;
+  list-style-type: none;
+  margin: 2em 0 0 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+nav ul li {
+  border-right: 1px solid #ccc;
+  float: left;
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+
+nav ul li a {
+  color: #777;
+  display: block;
+  font-size: 0.8em;
+  line-height: 1em;
+  padding: 3px 10px;
+  text-align: center;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+  /* Underline is more aestethically pleasing here. */
+  /* background: #ddd; */
+}
+
+nav ul li a:visited {
+  color: #aaa;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: underline;
+}
+
+/******************************************************************************
+ Main Content Elements
+*******************************************************************************/
+main {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 0 20px;
+}
+
+h1,
+main a {
+  color: #4aaaa5;
+}
+
+h1 {
+  border-bottom: 3px #ddd solid;
+  padding: 10px 0;
+}
+
+main img {
+  /* ISSUE: only rounding top, left corner (20200215). */
+  /* border-radius: 20px; */
+  float: left;
+  padding: 0 20px 20px 0;
+  width: 240px;
+}
+
+main p {
+  font-size: 20px;
+  line-height: 2em;
+}
+
+main figure img {
+  padding: 0;
+}
+
+main figure img,
+.photo-label {
+  width: 240px;
+}
+
+/******************************************************************************
+ Form Elements
+*******************************************************************************/
+main form input[type=text],
+main form input[type=email],
+main form textarea {
+  color: #ccc;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+/* Form input "glow" compliments of CSS Tricks:
+   https://css-tricks.com/snippets/css/glowing-blue-input-highlights/ */
+main form input,
+main form textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  line-height: 1.25em;
+  margin: 5px 1px 3px 0px;
+  outline: none;
+}
+
+main form input[type=text]:focus,
+main form input[type=email]:focus, 
+main form textarea:focus {
+  border: 1px solid rgba(74, 170, 165, 1);
+  color: #777;
+}
+ 
+main form input:focus, 
+main form textarea:focus,
+main form input[type=button]:hover,
+main form input[type=submit]:hover,
+main form input[type=reset]:hover {
+  box-shadow: 0 0 5px rgba(74, 170, 165, 1);
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+main form input[type=button],
+main form input[type=submit],
+main form input[type=reset] {
+  background-color: #4aaaa5;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+main form label {
+  display: block;
+  margin-top: 10px;
+}
+
+/******************************************************************************
+ Footer Element
+*******************************************************************************/
+footer {
+  background: #666;
+  border-top: 5px #4aaaa5 solid;
+  height: 50px;
+  width: 100%;
+}
+
+/******************************************************************************
+ Class & ID Elements
+*******************************************************************************/
+.header-container,
+.main-container,
+main,
+footer {
+  clear: both;
+  overflow: auto;
+}
+
+.header-container {
+  background: #fff;
+  border-bottom: 1px #ccc solid;
+  width: 100%;
+}
+
+.main-container {
+  margin: 20px auto;
+  min-height: calc(100vh - 150px);
+}
+
+.photo-box {
+  float: left;
+  margin: 20px;
+  padding: 0 10px;
+  position: relative;
+}
+
+.photo-label {
+  background: #4aaaa5;
+  bottom: 10px;
+  color: #fff;
+  display: block;
+  float: left;
+  opacity: 75%;
+  padding: 10px 0;
+  position: absolute;
+  text-align: center;
+}
+
+#name {
+  background: #4aaaa5;
+  float: left;
+  font: 2em 'Share Tech Mono', monospace;
+  line-height: 2em;
+  text-align: center;
+  width: 50%;
+}
+
+#name,
+#copyright {
+  color: #fff;
+}
+
+#copyright {
+  font-size: 0.8em;
+  padding: 10px 0;
+  text-align: center;
+}
